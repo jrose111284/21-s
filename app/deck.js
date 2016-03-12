@@ -8,4 +8,9 @@ Deck.prototype.cards = function() {
  return this.cardDeck;
 };
 
+Deck.prototype.dealCard = function() {
+  var result = this.cardDeck[Math.floor(Math.random()*this.cardDeck.length)];
+  return result;
+};
+
 module.exports = Deck;
