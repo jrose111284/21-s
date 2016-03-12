@@ -10,11 +10,9 @@ describe('21', function() {
   describe('initialization', function() {
 
    it('stores possable cards in a deck', function() {
-     expect(deck.cards).toEqual(cardsMock);
+     expect(deck.cardDeck).toEqual(cardsMock);
    });
 
   });
 
 });
-
-module.exports = Deck;
