@@ -101,6 +101,11 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.74);
       expect(deck.dealsuite()).toEqual('Hearts');
     });
+
+    it('deals the suite Diamonds', function(){
+      spyOn(Math,'random').and.returnValue(0.99);
+      expect(deck.dealsuite()).toEqual('Diamonds');
+    });
   });
 
 });
