@@ -22,67 +22,67 @@ describe('21', function() {
   describe('dealing cards', function(){
     it('deals one card', function(){
       spyOn(Math,'random').and.returnValue(0.01);
-      expect(deck.dealCard()).toEqual('Ace');
+      expect(deck.dealCardNumber()).toEqual('Ace');
     });
 
     it('deals number two card', function(){
       spyOn(Math,'random').and.returnValue(0.08);
-      expect(deck.dealCard()).toEqual(2);
+      expect(deck.dealCardNumber()).toEqual(2);
     });
 
     it('deals number three card', function(){
       spyOn(Math,'random').and.returnValue(0.16);
-      expect(deck.dealCard()).toEqual(3);
+      expect(deck.dealCardNumber()).toEqual(3);
     });
 
     it('deals number four card', function(){
       spyOn(Math,'random').and.returnValue(0.24);
-      expect(deck.dealCard()).toEqual(4);
+      expect(deck.dealCardNumber()).toEqual(4);
     });
 
     it('deals number five card', function(){
       spyOn(Math,'random').and.returnValue(0.32);
-      expect(deck.dealCard()).toEqual(5);
+      expect(deck.dealCardNumber()).toEqual(5);
     });
 
     it('deals number six card', function(){
       spyOn(Math,'random').and.returnValue(0.40);
-      expect(deck.dealCard()).toEqual(6);
+      expect(deck.dealCardNumber()).toEqual(6);
     });
 
     it('deals number seven card', function(){
       spyOn(Math,'random').and.returnValue(0.48);
-      expect(deck.dealCard()).toEqual(7);
+      expect(deck.dealCardNumber()).toEqual(7);
     });
 
     it('deals number eight card', function(){
       spyOn(Math,'random').and.returnValue(0.56);
-      expect(deck.dealCard()).toEqual(8);
+      expect(deck.dealCardNumber()).toEqual(8);
     });
 
     it('deals number nine card', function(){
       spyOn(Math,'random').and.returnValue(0.64);
-      expect(deck.dealCard()).toEqual(9);
+      expect(deck.dealCardNumber()).toEqual(9);
     });
 
     it('deals number ten card', function(){
       spyOn(Math,'random').and.returnValue(0.72);
-      expect(deck.dealCard()).toEqual(10);
+      expect(deck.dealCardNumber()).toEqual(10);
     });
 
     it('deals number jack card', function(){
       spyOn(Math,'random').and.returnValue(0.80);
-      expect(deck.dealCard()).toEqual('Jack');
+      expect(deck.dealCardNumber()).toEqual('Jack');
     });
 
     it('deals number queen card', function(){
       spyOn(Math,'random').and.returnValue(0.88);
-      expect(deck.dealCard()).toEqual('Queen');
+      expect(deck.dealCardNumber()).toEqual('Queen');
     });
 
     it('deals number king card', function(){
       spyOn(Math,'random').and.returnValue(0.96);
-      expect(deck.dealCard()).toEqual('King');
+      expect(deck.dealCardNumber()).toEqual('King');
     });
   });
 
@@ -105,6 +105,17 @@ describe('21', function() {
     it('deals the suite Diamonds', function(){
       spyOn(Math,'random').and.returnValue(0.99);
       expect(deck.dealsuite()).toEqual('Diamonds');
+    });
+  });
+  describe('dealing card and a suites', function(){
+    it('deals a card with a suite', function(){
+      spyOn(Math,'random').and.returnValues(0.48, 0.49);
+      expect(deck.dealCard()).toEqual('your card is 7 of Clubs');
+    });
+
+    it('deals a card with a suite', function(){
+      spyOn(Math,'random').and.returnValues(0.88, 0.74);
+      expect(deck.dealCard()).toEqual('your card is Queen of Hearts');
     });
   });
 

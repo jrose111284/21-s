@@ -9,7 +9,7 @@ Deck.prototype.cards = function() {
  return this.cardDeck;
 };
 
-Deck.prototype.dealCard = function() {
+Deck.prototype.dealCardNumber = function() {
   var result = this.cardDeck[Math.floor(Math.random()*this.cardDeck.length)];
   return result;
 };
@@ -17,6 +17,10 @@ Deck.prototype.dealCard = function() {
 Deck.prototype.dealsuite = function() {
   var result = this.cardSuite[Math.floor(Math.random()*this.cardSuite.length)];
   return result;
+}
+
+Deck.prototype.dealCard = function() {
+  return 'your card is ' + this.dealCardNumber() + ' of ' + this.dealsuite();
 }
 
 module.exports = Deck;
