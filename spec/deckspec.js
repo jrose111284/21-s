@@ -65,6 +65,21 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.72);
       expect(deck.dealCard()).toEqual(10);
     });
+
+    it('deals number jack card', function(){
+      spyOn(Math,'random').and.returnValue(0.80);
+      expect(deck.dealCard()).toEqual('Jack');
+    });
+
+    it('deals number queen card', function(){
+      spyOn(Math,'random').and.returnValue(0.88);
+      expect(deck.dealCard()).toEqual('Queen');
+    });
+
+    it('deals number king card', function(){
+      spyOn(Math,'random').and.returnValue(0.96);
+      expect(deck.dealCard()).toEqual('King');
+    });
   })
 
 });
