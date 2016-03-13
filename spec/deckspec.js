@@ -45,6 +45,26 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.40);
       expect(deck.dealCard()).toEqual(6);
     });
+
+    it('deals number seven card', function(){
+      spyOn(Math,'random').and.returnValue(0.48);
+      expect(deck.dealCard()).toEqual(7);
+    });
+
+    it('deals number eight card', function(){
+      spyOn(Math,'random').and.returnValue(0.56);
+      expect(deck.dealCard()).toEqual(8);
+    });
+
+    it('deals number nine card', function(){
+      spyOn(Math,'random').and.returnValue(0.64);
+      expect(deck.dealCard()).toEqual(9);
+    });
+
+    it('deals number ten card', function(){
+      spyOn(Math,'random').and.returnValue(0.72);
+      expect(deck.dealCard()).toEqual(10);
+    });
   })
 
 });
