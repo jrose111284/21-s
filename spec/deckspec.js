@@ -20,6 +20,16 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.01);
       expect(deck.dealCard()).toEqual('Ace');
     });
+
+    it('deals number two card', function(){
+      spyOn(Math,'random').and.returnValue(0.08);
+      expect(deck.dealCard()).toEqual(2);
+    });
+
+    it('deals number three card', function(){
+      spyOn(Math,'random').and.returnValue(0.16);
+      expect(deck.dealCard()).toEqual(3);
+    });
   })
 
 });
