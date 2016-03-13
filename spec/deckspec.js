@@ -96,6 +96,11 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.49);
       expect(deck.dealsuite()).toEqual('Clubs');
     });
+
+    it('deals the suite Hearts', function(){
+      spyOn(Math,'random').and.returnValue(0.74);
+      expect(deck.dealsuite()).toEqual('Hearts');
+    });
   });
 
 });
