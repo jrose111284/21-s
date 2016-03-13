@@ -30,6 +30,21 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.16);
       expect(deck.dealCard()).toEqual(3);
     });
+
+    it('deals number four card', function(){
+      spyOn(Math,'random').and.returnValue(0.24);
+      expect(deck.dealCard()).toEqual(4);
+    });
+
+    it('deals number five card', function(){
+      spyOn(Math,'random').and.returnValue(0.32);
+      expect(deck.dealCard()).toEqual(5);
+    });
+
+    it('deals number six card', function(){
+      spyOn(Math,'random').and.returnValue(0.40);
+      expect(deck.dealCard()).toEqual(6);
+    });
   })
 
 });
