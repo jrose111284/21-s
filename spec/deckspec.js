@@ -2,6 +2,7 @@ var Deck = require('../app/deck.js');
 
 describe('21', function() {
   var cardsMock = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
+  var cardsSuiteMock = ['Spades', 'Clubs', 'Hearts', 'Diamonds'];
 
   beforeEach(function() {
     deck = new Deck();
@@ -11,6 +12,10 @@ describe('21', function() {
 
     it('stores possable cards in a deck', function() {
       expect(deck.cardDeck).toEqual(cardsMock);
+    });
+
+    it('stores possable cards suites in a deck', function() {
+      expect(deck.cardSuite).toEqual(cardsSuiteMock);
     });
   });
 
