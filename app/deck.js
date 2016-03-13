@@ -14,4 +14,9 @@ Deck.prototype.dealCard = function() {
   return result;
 };
 
+Deck.prototype.dealsuite = function() {
+  var result = this.cardSuite[Math.floor(Math.random()*this.cardSuite.length)];
+  return result;
+}
+
 module.exports = Deck;

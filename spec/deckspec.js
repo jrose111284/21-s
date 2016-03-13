@@ -20,7 +20,6 @@ describe('21', function() {
   });
 
   describe('dealing cards', function(){
-
     it('deals one card', function(){
       spyOn(Math,'random').and.returnValue(0.01);
       expect(deck.dealCard()).toEqual('Ace');
@@ -85,6 +84,13 @@ describe('21', function() {
       spyOn(Math,'random').and.returnValue(0.96);
       expect(deck.dealCard()).toEqual('King');
     });
-  })
+  });
+
+  describe('dealing card suites', function(){
+    it('deals the suite Spades', function(){
+      spyOn(Math,'random').and.returnValue(0.24);
+      expect(deck.dealsuite()).toEqual('Spades');
+    });
+  });
 
 });
