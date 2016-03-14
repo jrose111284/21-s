@@ -17,10 +17,10 @@ Deck.prototype.dealCardNumber = function() {
 Deck.prototype.dealsuite = function() {
   var result = this.cardSuite[Math.floor(Math.random()*this.cardSuite.length)];
   return result;
-}
+};
 
 Deck.prototype.dealCard = function() {
   return 'your card is ' + this.dealCardNumber() + ' of ' + this.dealsuite();
-}
+};
 
 module.exports = Deck;

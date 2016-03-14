@@ -9,7 +9,6 @@ describe('21', function() {
   });
 
   describe('initialization', function() {
-
     it('stores possable cards in a deck', function() {
       expect(deck.cardDeck).toEqual(cardsMock);
     });
@@ -107,6 +106,7 @@ describe('21', function() {
       expect(deck.dealsuite()).toEqual('Diamonds');
     });
   });
+
   describe('dealing card and a suites', function(){
     it('deals a card with a suite', function(){
       spyOn(Math,'random').and.returnValues(0.48, 0.49);
