@@ -4,8 +4,8 @@ var Dealer = function() {
 
 };
 
-Dealer.prototype.dealCard = function(deck) {
-  return this.dealCardNumber();
+Dealer.prototype.dealCard = function() {
+return 'your card is ' + deck.dealCardNumber() + ' of ' + deck.dealsuite();
 };
-var deck = new Deck();
+
 module.exports = Dealer;
