@@ -16,4 +16,10 @@ describe('dealer dealing cards', function() {
     spyOn(Math,'random').and.returnValues(0.88, 0.74);
     expect(dealer.dealCard()).toEqual('your card is Queen of Hearts');
   });
+
+  it('dealer will give sam 2 cards', function(){
+    spyOn(Math,'random').and.returnValues(0.48, 0.49, 0.88, 0.74);
+    expect(dealer.dealCard()).toEqual('your card is 7 of Clubs');
+    expect(dealer.dealCard()).toEqual('your card is Queen of Hearts');
+  })
 });
