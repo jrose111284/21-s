@@ -107,16 +107,4 @@ describe('21', function() {
     });
   });
 
-  describe('dealing card and a suites', function(){
-    it('deals a card with a suite', function(){
-      spyOn(Math,'random').and.returnValues(0.48, 0.49);
-      expect(deck.dealCard()).toEqual('your card is 7 of Clubs');
-    });
-
-    it('deals a card with a suite', function(){
-      spyOn(Math,'random').and.returnValues(0.88, 0.74);
-      expect(deck.dealCard()).toEqual('your card is Queen of Hearts');
-    });
-  });
-
 });

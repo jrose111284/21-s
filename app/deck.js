@@ -19,8 +19,4 @@ Deck.prototype.dealsuite = function() {
   return result;
 };
 
-Deck.prototype.dealCard = function() {
-  return 'your card is ' + this.dealCardNumber() + ' of ' + this.dealsuite();
-};
-
 module.exports = Deck;
