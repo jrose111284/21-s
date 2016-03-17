@@ -1,18 +1,17 @@
 "use strict";
 
 var Dealer = function() {
-
+  this.cardNumber = []
 };
 
 Dealer.prototype.dealCard = function() {
-  return 'your card is ' + deck.dealCardNumber() + ' of ' + deck.dealsuite();
+  this.cardNumber.push(deck.dealCardNumber(), deck.dealsuite());
+  deck.dealsuite();
+  return 'your card is ' + this.cardNumber[0] + ' of ' + this.cardNumber[1];
 };
 
 Dealer.prototype.calculateCards = function(){
-  var total = [];
-  total.push(deck.dealCardNumber());
-  // for (var i = 0, sum = 0; i < total.length; sum += total[i++]);
-  return total;
-}
+  return this.cardNumber[0];
+};
 
 module.exports = Dealer;
