@@ -24,9 +24,15 @@ describe('will added the two cards together', function(){
   it('will add the cards together not including ace,jack,queen king', function(){
     spyOn(Math,'random').and.returnValue(0.72);
     dealer.dealCard();
-    expect(dealer.calculateCards()).toEqual(10);
+    dealer.dealCard();
+    expect(dealer.calculateCards()).toEqual(20);
   });
 
+  it('will can work with jack', function(){
+    spyOn(Math,'random').and.returnValue(0.80);
+    dealer.dealCard();
+    expect(dealer.calculateCards()).toEqual(10);
+  });
 });
 
 // describe('will check if total is 21', function(){
