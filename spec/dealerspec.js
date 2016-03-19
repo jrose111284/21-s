@@ -41,5 +41,14 @@ describe('will change Ace to equal 1', function(){
   it('will make ace eaual 1 not ace', function(){
     spyOn(Math,'random').and.returnValues(0.01, 0.24);
     expect(dealer.dealCard()).toEqual('your card is 1 of Spades');
-  })
-})
+  });
+});
+
+describe('will add to the two cards together', function(){
+  it('will make ace eaual 1 not ace', function(){
+    spyOn(Math,'random').and.returnValue(0.48);
+    dealer.dealCard();
+    dealer.dealCard();
+    expect(dealer.total()).toEqual('your total is 14');
+  });
+});
