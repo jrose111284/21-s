@@ -14,30 +14,25 @@ describe('dealer dealing cards', function() {
   });
 
   it('deals a card with a suite', function(){
-    spyOn(Math,'random').and.returnValues(0.88, 0.74);
-    expect(dealer.dealCard()).toEqual('your card is Queen of Hearts');
+    spyOn(Math,'random').and.returnValues(0.72, 0.74);
+    expect(dealer.dealCard()).toEqual('your card is 10 of Hearts');
   });
 });
 
-describe('will added the two cards together', function(){
-
-  it('will add the cards together not including ace,jack,queen king', function(){
-    spyOn(Math,'random').and.returnValue(0.72);
-    dealer.dealCard();
-    dealer.dealCard();
-    expect(dealer.calculateCards()).toEqual(20);
-  });
+describe('will change jack, queen, king to 10', function(){
 
   it('will can work with jack', function(){
-    spyOn(Math,'random').and.returnValue(0.80);
-    dealer.dealCard();
-    expect(dealer.calculateCards()).toEqual(10);
+    spyOn(Math,'random').and.returnValues(0.80, 0.24);
+    expect(dealer.dealCard()).toEqual('your card is 10 of Spades');
+  });
+
+  it('will can work with Queen', function(){
+    spyOn(Math,'random').and.returnValues(0.88, 0.24);
+    expect(dealer.dealCard()).toEqual('your card is 10 of Spades');
+  });
+
+  it('will can work with King', function(){
+    spyOn(Math,'random').and.returnValues(0.96, 0.24);
+    expect(dealer.dealCard()).toEqual('your card is 10 of Spades');
   });
 });
-
-// describe('will check if total is 21', function(){
-//   it('will add 2 cards together that equals 21',function() {
-//     dealer.dealCard().and.returnValue(0.72);
-//     expect(dealer.calculateCards()).toEqual('well done you beat the dealer');
-//   });
-// });
