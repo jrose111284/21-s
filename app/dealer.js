@@ -18,7 +18,9 @@ Dealer.prototype.checkCard = function(){
         this.cardNumber[i] = 10;
     } else if (this.cardNumber[i] == 'King') {
         this.cardNumber[i] = 10;
-    } else {
+    } else if (this.cardNumber[i] == 'Ace') {
+      this.cardNumber[i] = 1;
+    }else {
         return this.cardNumber;
   }
 };

@@ -36,3 +36,10 @@ describe('will change jack, queen, king to 10', function(){
     expect(dealer.dealCard()).toEqual('your card is 10 of Spades');
   });
 });
+
+describe('will change Ace to equal 1', function(){
+  it('will make ace eaual 1 not ace', function(){
+    spyOn(Math,'random').and.returnValues(0.01, 0.24);
+    expect(dealer.dealCard()).toEqual('your card is 1 of Spades');
+  })
+})
