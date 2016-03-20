@@ -21,13 +21,19 @@ Dealer.prototype.checkCard = function() {
     } else if (this.cardNumber[i] == 'King') {
         this.cardNumber[i] = 10;
     } else if (this.cardNumber[i] == 'Ace') {
-      this.cardNumber[i] = 1;
+      this.cardNumber[i] = 11;
     }else {
       return this.cardNumber;
   }
 };
 
 Dealer.prototype.total = function() {
-  return ('your total is ' + (this.cardNumber[0] += this.cardNumber[1]));
+  if ((this.cardNumber[0] += this.cardNumber[1]) >= 17) {
+    return ('sorry your total is ' + (this.cardNumber[0] += this.cardNumber[1]) + ' and is over 17, cannot have another card');
+    console.log(this.cardNumber);
+  } else {
+    return ('your total is ' + (this.cardNumber[0] += this.cardNumber[1]));
 }
+};
+
 module.exports = Dealer;

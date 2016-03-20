@@ -35,20 +35,29 @@ describe('will change jack, queen, king to 10', function(){
     spyOn(Math,'random').and.returnValues(0.96, 0.24);
     expect(dealer.dealCard()).toEqual('your card is 10 of Spades');
   });
-});
 
-describe('will change Ace to equal 1', function(){
-  it('will make ace eaual 1 not ace', function(){
+  it('will can work with ace', function(){
     spyOn(Math,'random').and.returnValues(0.01, 0.24);
-    expect(dealer.dealCard()).toEqual('your card is 1 of Spades');
+    expect(dealer.dealCard()).toEqual('your card is 11 of Spades');
   });
+
+
 });
 
-describe('will add to the two cards together', function(){
-  it('will make ace eaual 1 not ace', function(){
-    spyOn(Math,'random').and.returnValue(0.48);
-    dealer.dealCard();
-    dealer.dealCard();
-    expect(dealer.total()).toEqual('your total is 14');
+// describe('will add to the two cards together', function(){
+//   it('will add to card together that are jack queen king', function(){
+//     spyOn(Math,'random').and.returnValue(0.48);
+//     dealer.dealCard();
+//     dealer.dealCard();
+//     expect(dealer.total()).toEqual('your total is 14');
+//   });
+// });
+
+  describe('dealer will stop given cards if sam reaches 17 or over', function(){
+    it('if your 2 cards are over 17 you cant draw another card', function(){
+      spyOn(Math,'random').and.returnValue(0.96);
+      dealer.dealCard();
+      dealer.dealCard();
+      expect(dealer.total()).toEqual('sorry your total is 17 and is over 17, cannot have another card');
+    });
   });
-});
