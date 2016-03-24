@@ -8,7 +8,6 @@ var Dealer = function() {
 Dealer.prototype.dealCard = function() {
   this.cardNumber.push(deck.dealCardNumber())
   this.suite.push(deck.dealsuite());
-  this.checkCard();
   return 'your card is ' + this.cardNumber[0] + ' of ' + this.suite[0];
 };
 
@@ -28,12 +27,11 @@ Dealer.prototype.checkCard = function() {
 };
 
 Dealer.prototype.total = function() {
-  if ((this.cardNumber[0] += this.cardNumber[1]) >= 17) {
+  if (this.cardNumber[0] += this.cardNumber[1] >= 17) {
     return ('sorry your total is ' + (this.cardNumber[0] += this.cardNumber[1]) + ' and is over 17, cannot have another card');
-    console.log(this.cardNumber);
   } else {
-    return ('your total is ' + (this.cardNumber[0] += this.cardNumber[1]));
-}
+    return ('your total is ' + (this.cardNumber[0] += this.cardNumber[1]) + ' you can draw another card');
+  }
 };
 
 module.exports = Dealer;
