@@ -14,15 +14,15 @@ Dealer.prototype.dealCard = function() {
 Dealer.prototype.checkCard = function() {
   for (var i = 0; i < this.cardNumber.length; i++)
     if (this.cardNumber[i] == 'Jack')
-        this.cardNumber[i] = 10;
+      this.cardNumber[i] = 10;
     else if (this.cardNumber[i] == 'Queen') {
-        this.cardNumber[i] = 10;
-    } else if (this.cardNumber[i] == 'King') {
-        this.cardNumber[i] = 10;
-    } else if (this.cardNumber[i] == 'Ace') {
-      this.cardNumber[i] = 11;
-    }else {
-      return this.cardNumber;
+    this.cardNumber[i] = 10;
+  } else if (this.cardNumber[i] == 'King') {
+    this.cardNumber[i] = 10;
+  } else if (this.cardNumber[i] == 'Ace') {
+    this.cardNumber[i] = 11;
+  } else {
+    return this.cardNumber;
   }
 };
 

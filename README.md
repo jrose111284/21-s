@@ -16,3 +16,16 @@ the Dealer should stop drawing cards when their total is higher than Sam.
 the Dealer has lost the game if their total is higher than 21
 determine which player wins the game
 [1] Numbered cards are their point value. Jack, Queen and King count as 10 and Ace counts as 11.
+
+#Instructions
+
+```
+git clone git@github.com:jrose111284/21-s.git
+```
+
+To run test
+
+```
+jasmine
+
+```
