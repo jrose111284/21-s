@@ -6,16 +6,16 @@ var Deck = function() {
 };
 
 Deck.prototype.cards = function() {
- return this.cardDeck;
+  return this.cardDeck;
 };
 
 Deck.prototype.dealCardNumber = function() {
-  var result = this.cardDeck[Math.floor(Math.random()*this.cardDeck.length)];
+  var result = this.cardDeck[Math.floor(Math.random() * this.cardDeck.length)];
   return result;
 };
 
 Deck.prototype.dealsuite = function() {
-  var result = this.cardSuite[Math.floor(Math.random()*this.cardSuite.length)];
+  var result = this.cardSuite[Math.floor(Math.random() * this.cardSuite.length)];
   return result;
 };
 
