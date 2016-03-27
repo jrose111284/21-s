@@ -16,15 +16,24 @@ Dealer.prototype.checkCard = function() {
     if (this.cardNumber[i] == 'Jack')
       this.cardNumber[i] = 10;
     else if (this.cardNumber[i] == 'Queen') {
-    this.cardNumber[i] = 10;
+      this.cardNumber[i] = 10;
   } else if (this.cardNumber[i] == 'King') {
-    this.cardNumber[i] = 10;
+      this.cardNumber[i] = 10;
   } else if (this.cardNumber[i] == 'Ace') {
-    this.cardNumber[i] = 11;
+      this.cardNumber[i] = 11;
   } else {
     return this.cardNumber;
   }
 };
+
+Dealer.prototype.checkForBlackJack = function() {
+  if (this.cardNumber[0] += this.cardNumber[1] == 21) {
+    return ('congratulations you have black jack')
+  } else {
+    return this.total();
+  }
+};
+
 
 Dealer.prototype.total = function() {
   if (this.cardNumber[0] += this.cardNumber[1] >= 17) {

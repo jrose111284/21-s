@@ -69,3 +69,13 @@ describe('dealer will stop given cards if sam reaches 17 or over', function() {
     expect(dealer.total()).toEqual('sorry your total is 20 and is over 17, cannot have another card');
   });
 });
+
+describe('check for black jack', function(){
+  it('adds ace and king and return black jack', function(){
+    spyOn(Math, 'random').and.returnValues(0.01, 0.96);
+    dealer.dealCard();
+    dealer.dealCard();
+    dealer.checkCard();
+    expect(dealer.checkForBlackJack()).toEqual('congratulations you have black jack');
+  })
+})
