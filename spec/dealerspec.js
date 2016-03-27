@@ -78,4 +78,13 @@ describe('check for black jack', function(){
     dealer.checkCard();
     expect(dealer.checkForBlackJack()).toEqual('congratulations you have black jack');
   })
+
+  it('adds king and king and checks for black jack', function(){
+    spyOn(Math, 'random').and.returnValue(0.96);
+    dealer.dealCard();
+    dealer.dealCard();
+    dealer.checkCard();
+    dealer.checkForBlackJack()
+    expect(dealer.total()).toEqual('sorry your total is 20 and is over 17, cannot have another card');
+  })
 })
