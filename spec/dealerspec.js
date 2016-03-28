@@ -87,4 +87,5 @@ describe('check for black jack', function(){
     dealer.checkForBlackJack()
     expect(dealer.total()).toEqual('sorry your total is 20 and is over 17, cannot have another card');
   })
+
 })

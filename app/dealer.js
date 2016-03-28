@@ -34,7 +34,6 @@ Dealer.prototype.checkForBlackJack = function() {
   }
 };
 
-
 Dealer.prototype.total = function() {
   if (this.cardNumber[0] += this.cardNumber[1] >= 17) {
     return ('sorry your total is ' + (this.cardNumber[0] += this.cardNumber[1]) + ' and is over 17, cannot have another card');
@@ -42,5 +41,15 @@ Dealer.prototype.total = function() {
     return ('your total is ' + (this.cardNumber[0] += this.cardNumber[1]) + ' you can draw another card');
   }
 };
+
+Dealer.prototype.win = function() {
+  if ((this.cardNumber[0] += this.cardNumber[1]) > (this.cardNumber[2] += this.cardNumber[3])) {
+    return 'dealer has won'
+  } else if ((this.cardNumber[0] += this.cardNumber[1]) < (this.cardNumber[2] += this.cardNumber[3])) {
+    return 'sam you beat the dealer'
+  } else {
+    return 'its a draw'
+  }
+}
 
 module.exports = Dealer;
